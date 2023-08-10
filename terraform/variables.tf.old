@@ -1,0 +1,14 @@
+variable "docker_images" {
+    type = list(string)
+    default = [
+        "mysql:latest",
+        "redis:latest",
+        "postgres:latest",
+        "mongo:latest",
+        "debian:latest",
+        "ubuntu:latest",
+        "node:latest",
+        "nginx:latest",
+        "sonarqube:latest",
+        ]
+}

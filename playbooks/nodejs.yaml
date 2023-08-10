@@ -1,0 +1,18 @@
+- name: Install NodeJS Play
+  hosts: all
+  tasks:
+    - name: Install Node
+      ansible.builtin.apt:
+        name:
+          - nodejs
+          - npm
+        state: present
+
+# - name: Install nodeJS Play
+#   hosts: all
+#   tasks:
+#     - ansible.builtin.apt:
+#         name:
+#           - nodeJS
+#           - npm
+#         state: present

@@ -9,7 +9,7 @@ services:
       - 4000:80
     networks:
       frontend-net:
-        ipv4_address: 172.51.0.101
+        ipv4_address: 172.50.0.101
   backend:
     container_name: backend_container
     ports:
@@ -22,7 +22,7 @@ services:
       backend-net:
         ipv4_address: 172.100.0.100
       frontend-net:
-        ipv4_address: 172.51.0.100
+        ipv4_address: 172.50.0.100
     depends_on:
       - database
     volumes:
@@ -50,7 +50,7 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 172.51.0.0/16
+        - subnet: 172.50.0.0/16
 
 volumes:
   backend_volume:
